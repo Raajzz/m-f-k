@@ -5,4 +5,4 @@ A hobby full-stack project.
 Pondering...🌃
 
 # Inspiration
-Telltales' The Walking Dead, Season 4, Episode 2
+Telltale's The Walking Dead, Season 4, Episode 2
