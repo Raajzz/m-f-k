@@ -3,6 +3,55 @@ import { Link } from "react-router-dom";
 //GiFrayedArrow
 import { AiOutlineArrowRight } from "react-icons/gi";
 
+const Header = () => {
+  return (
+    <div className="grid grid-cols-2 mb-5 p-10">
+      <div className=" font-bold text-2xl ">
+        <Link
+          to="/"
+          className=" hover:underline decoration-blue-500 rounded-2xl border-2 border-slate-500 px-4"
+        >
+          <span className="text-violet-900">M</span>
+          <span className="text-red-600">L</span>
+          <span className="text-gray-600">F</span>
+        </Link>
+      </div>
+
+      <div
+        className=" font-bold text-2xl"
+        style={{
+          position: "absolute",
+          right: "5vw",
+          // left:"0px"
+        }}
+      >
+        <Link
+          to="/"
+          className=" hover:underline decoration-blue-500 rounded-2xl border-2 border-slate-500 px-4"
+        >
+          <span className="text-violet-900">LOGIN</span>
+        </Link>
+      </div>
+
+      <div
+        className=" font-bold text-2xl"
+        style={{
+          position: "absolute",
+          right: "13vw",
+          // left:"0px"
+        }}
+      >
+        <Link
+          to="/"
+          className=" hover:underline decoration-blue-500 rounded-2xl border-2 border-slate-500 px-4"
+        >
+          <span className="text-red-600">SIGN UP</span>
+
+        </Link>
+      </div>
+    </div>
+  );
+}
 
 const Home = () => {
   const [message, setMessage] = useState("WELCOME TO");
@@ -21,14 +70,10 @@ const Home = () => {
   return (
     <div>
       {/* HEADER BEGIN */}
-      <div className=" mb-20"></div>
+      <Header/>
       {/* HEADER END */}
       {/* BODY */}
       <div className="text-center">
-        {/* <Link to="/">Home</Link>
-        <Link to="/play">Play</Link>
-        <Link to="/Profile">Profile</Link>
-        <Link to="/Error">Error</Link> */}
       </div>
       <div
         // style={{
