@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+//GiFrayedArrow
+import { AiOutlineArrowRight } from "react-icons/gi";
+
 
 const Home = () => {
   const [message, setMessage] = useState("WELCOME TO");
@@ -20,7 +23,6 @@ const Home = () => {
       {/* HEADER BEGIN */}
       <div className=" mb-20"></div>
       {/* HEADER END */}
-
       {/* BODY */}
       <div className="text-center">
         {/* <Link to="/">Home</Link>
@@ -32,13 +34,13 @@ const Home = () => {
         // style={{
         //   "font-size": "7vw",
         // }}
-        className="text-center text-6xl sm:text-7xl md:text-8xl font-semibold"
+        className="text-center text-7xl sm:text-8xl md:text-8xl font-semibold"
       >
         <div className={messageStyle}>{message}</div>
         <br />
-        <div className=" text-5xl sm:text-6xl md:text-7xl">
+        <div className=" text-6xl sm:text-7xl md:text-7xl">
           <span
-            className=" mx-4 pb-5 text-violet-900"
+            className="hover:underline cursor-none mx-4 pb-5 text-violet-900"
             onMouseEnter={() => {
               mouseEnterHandler("TEMP-MARRY", "text-violet-900");
             }}
@@ -48,7 +50,7 @@ const Home = () => {
           </span>
           -
           <span
-            className=" mx-4 pb-5 text-red-600"
+            className="cursor-none hover:underline mx-4 pb-5 text-red-600"
             onMouseEnter={() => {
               mouseEnterHandler("TEMP-LOVE", "text-red-600");
             }}
@@ -58,7 +60,7 @@ const Home = () => {
           </span>
           -
           <span
-            className=" mx-4 pb-5 text-gray-600"
+            className="cursor-none hover:underline  mx-4 pb-5 text-gray-600"
             onMouseEnter={() => {
               mouseEnterHandler("TEMP-FRIEND", "text-gray-600");
             }}
@@ -68,8 +70,15 @@ const Home = () => {
           </span>
         </div>
       </div>
+      <div className="text-center my-20 ">
+        <Link
+          to="/play"
+          className=" rounded-2xl hover:bg-sky-200 hover:text-sky-600 hover:underline px-6 py-2 bg-sky-600 text-white text-5xl"
+        >
+          &gt;&gt; PLAY &gt;&gt;
+        </Link>
+      </div>
       {/* BODY-END */}
-
       {/* FOOTER */}
       {/* FOOTER END */}
     </div>
