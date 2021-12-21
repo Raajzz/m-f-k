@@ -1,4 +1,4 @@
-# smp-projects* 
+# smp-project* 
 A hobby full-stack project.
 
 # Tech-Stack
