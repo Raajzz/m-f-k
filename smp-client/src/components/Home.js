@@ -11,9 +11,9 @@ const Header = () => {
           to="/"
           className=" hover:underline decoration-blue-500 rounded-2xl border-2 border-slate-500 px-4"
         >
-          <span className="text-violet-900">M</span>
-          <span className="text-red-600">L</span>
-          <span className="text-gray-600">F</span>
+          <span className="text-violet-900">3</span>
+          <span className="text-gray-600">-</span>
+          <span className="text-red-600">PIC</span>
         </Link>
       </div>
 
@@ -36,6 +36,7 @@ const Header = () => {
       <div
         className=" font-bold text-2xl"
         style={{
+          display:"block",
           position: "absolute",
           right: "13vw",
           // left:"0px"
@@ -46,7 +47,6 @@ const Header = () => {
           className=" hover:underline decoration-blue-500 rounded-2xl border-2 border-slate-500 px-4"
         >
           <span className="text-red-600">SIGN UP</span>
-
         </Link>
       </div>
     </div>

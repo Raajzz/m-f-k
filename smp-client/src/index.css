@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+  .for-links {
+    @apply underline hover:no-underline text-sky-600;
+  }
+}
