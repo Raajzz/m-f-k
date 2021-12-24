@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 //GiFrayedArrow
 import { AiOutlineArrowRight } from "react-icons/gi";
 
+
 const Header = () => {
   return (
     <div className="grid grid-cols-2 mb-5 p-10">
@@ -85,33 +86,33 @@ const Home = () => {
         <br />
         <div className=" text-6xl sm:text-7xl md:text-7xl">
           <span
-            className="hover:underline cursor-none mx-4 pb-5 text-violet-900"
+            className="hover:underline cursor-none mx-4 pb-5 text-yellow-500"
             onMouseEnter={() => {
-              mouseEnterHandler("TEMP-MARRY", "text-violet-900");
-            }}
-            onMouseLeave={mouseLeaveHandler}
-          >
-            MARRY
-          </span>
-          -
-          <span
-            className="cursor-none hover:underline mx-4 pb-5 text-red-600"
-            onMouseEnter={() => {
-              mouseEnterHandler("TEMP-LOVE", "text-red-600");
-            }}
-            onMouseLeave={mouseLeaveHandler}
-          >
-            LOVE
-          </span>
-          -
-          <span
-            className="cursor-none hover:underline  mx-4 pb-5 text-gray-600"
-            onMouseEnter={() => {
-              mouseEnterHandler("TEMP-FRIEND", "text-gray-600");
+              mouseEnterHandler("TEMP-FRIEND", "text-yellow-500");
             }}
             onMouseLeave={mouseLeaveHandler}
           >
             FRIEND
+          </span>
+          -
+          <span
+            className="cursor-none hover:underline mx-4 pb-5 text-green-600"
+            onMouseEnter={() => {
+              mouseEnterHandler("TEMP-FAMILY", "text-green-600");
+            }}
+            onMouseLeave={mouseLeaveHandler}
+          >
+            FAMILY
+          </span>
+          -
+          <span
+            className="cursor-none hover:underline  mx-4 pb-5 text-red-700"
+            onMouseEnter={() => {
+              mouseEnterHandler("TEMP-FOE", "text-red-700");
+            }}
+            onMouseLeave={mouseLeaveHandler}
+          >
+            FOE
           </span>
         </div>
       </div>
