@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 //GiFrayedArrow
-import { AiOutlineArrowRight } from "react-icons/gi";
+import welcome from "../img/WELCOME.png";
+import family from "../img/FAMILY.png";
+import familynobg from "../img/FAMILYNOBG.png";
+import friend from "../img/FRIEND.png";
+import friendnobg from "../img/FRIENDNOBG.png";
+import foe from "../img/FOE.png";
+import foenobg from "../img/FOENOBG.png";
 
+import { AiOutlineArrowRight } from "react-icons/gi";
 
 const Header = () => {
   return (
@@ -37,7 +44,7 @@ const Header = () => {
       <div
         className=" font-bold text-2xl"
         style={{
-          display:"block",
+          display: "block",
           position: "absolute",
           right: "13vw",
           // left:"0px"
@@ -52,10 +59,10 @@ const Header = () => {
       </div>
     </div>
   );
-}
+};
 
 const Home = () => {
-  const [message, setMessage] = useState("WELCOME TO");
+  const [message, setMessage] = useState(welcome);
   const [messageStyle, setMessageStyle] = useState("");
 
   const mouseEnterHandler = (messageParam, styleParam) => {
@@ -64,55 +71,55 @@ const Home = () => {
   };
 
   const mouseLeaveHandler = () => {
-    setMessage("WELCOME TO");
+    setMessage(welcome);
     setMessageStyle("");
   };
 
   return (
     <div>
       {/* HEADER BEGIN */}
-      <Header/>
+      <Header />
       {/* HEADER END */}
       {/* BODY */}
-      <div className="text-center">
-      </div>
+      <div className="text-center"></div>
       <div
         // style={{
         //   "font-size": "7vw",
         // }}
         className="text-center text-7xl sm:text-8xl md:text-8xl font-semibold"
       >
-        <div className={messageStyle}>{message}</div>
+        {/* <div className={messageStyle}>{message}</div> */}
+        <img src={message} alt="welcome message" />
         <br />
         <div className=" text-6xl sm:text-7xl md:text-7xl">
           <span
             className="hover:underline cursor-none mx-4 pb-5 text-yellow-500"
             onMouseEnter={() => {
-              mouseEnterHandler("TEMP-FRIEND", "text-yellow-500");
+              mouseEnterHandler(friend, "text-yellow-500");
             }}
             onMouseLeave={mouseLeaveHandler}
           >
-            FRIEND
+            <img src={friendnobg} alt="friend" className=" w-4/12" />
           </span>
           -
           <span
             className="cursor-none hover:underline mx-4 pb-5 text-green-600"
             onMouseEnter={() => {
-              mouseEnterHandler("TEMP-FAMILY", "text-green-600");
+              mouseEnterHandler(family, "text-green-600");
             }}
             onMouseLeave={mouseLeaveHandler}
           >
-            FAMILY
+            <img src={familynobg} alt="family" className=" w-4/12" />
           </span>
           -
           <span
-            className="cursor-none hover:underline  mx-4 pb-5 text-red-700"
+            className="cursor-none hover:underline  mx-4 pb-5 text-red-600"
             onMouseEnter={() => {
-              mouseEnterHandler("TEMP-FOE", "text-red-700");
+              mouseEnterHandler(foe, "text-red-700");
             }}
             onMouseLeave={mouseLeaveHandler}
           >
-            FOE
+            <img src={foenobg} alt="foe" className=" w-4/12" />
           </span>
         </div>
       </div>
