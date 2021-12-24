@@ -89,38 +89,40 @@ const Home = () => {
         className="text-center text-7xl sm:text-8xl md:text-8xl font-semibold"
       >
         {/* <div className={messageStyle}>{message}</div> */}
-        <img src={message} alt="welcome message" />
+        <img
+          src={message}
+          alt="welcome message"
+          className=" object-cover w-9/12 mx-auto h-40"
+        />
         <br />
-        <div className=" text-6xl sm:text-7xl md:text-7xl">
-          <span
-            className="hover:underline cursor-none mx-4 pb-5 text-yellow-500"
-            onMouseEnter={() => {
-              mouseEnterHandler(friend, "text-yellow-500");
-            }}
-            onMouseLeave={mouseLeaveHandler}
-          >
-            <img src={friendnobg} alt="friend" className=" w-4/12" />
-          </span>
-          -
-          <span
-            className="cursor-none hover:underline mx-4 pb-5 text-green-600"
+        <div className=" grid grid-cols-3">
+          <img
+            src={familynobg}
+            alt="family"
+            className="cursor-none"
             onMouseEnter={() => {
               mouseEnterHandler(family, "text-green-600");
             }}
             onMouseLeave={mouseLeaveHandler}
-          >
-            <img src={familynobg} alt="family" className=" w-4/12" />
-          </span>
-          -
-          <span
-            className="cursor-none hover:underline  mx-4 pb-5 text-red-600"
+          />
+          <img
+            src={friendnobg}
+            alt="friend"
+            className=" cursor-none"
+            onMouseEnter={() => {
+              mouseEnterHandler(friend, "text-yellow-500");
+            }}
+            onMouseLeave={mouseLeaveHandler}
+          />
+          <img
+            src={foenobg}
+            alt="foe"
+            className="cursor-none"
             onMouseEnter={() => {
               mouseEnterHandler(foe, "text-red-700");
             }}
             onMouseLeave={mouseLeaveHandler}
-          >
-            <img src={foenobg} alt="foe" className=" w-4/12" />
-          </span>
+          />
         </div>
       </div>
       <div className="text-center my-20 ">
